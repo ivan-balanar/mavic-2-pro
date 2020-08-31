@@ -7,11 +7,17 @@ $(function () {
   });
 
   $('.questions__item-title').click(function () {
-    
+
     $(this).toggleClass('in').next().slideToggle();
     $('.questions__item-title').not(this).removeClass('in').next().slideUp();
 
   });
+
+  $('#fullpage').fullpage({
+		autoScrolling:true,
+    scrollHorizontally: true,
+    sectionSelector: '.page-section',
+	});
 
 
 });
