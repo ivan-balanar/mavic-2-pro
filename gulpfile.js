@@ -16,7 +16,8 @@ gulp.task('scss', function(){
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 8 versions']
+      overrideBrowserslist: ['last 8 versions'],
+      cascade: false
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'))
@@ -47,6 +48,7 @@ gulp.task('script', function(){
 gulp.task('js', function(){
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/fullpage.js/vendors/scrolloverflow.js',
     'node_modules/fullpage.js/dist/fullpage.js',
   ])
     .pipe(concat('libs.min.js'))

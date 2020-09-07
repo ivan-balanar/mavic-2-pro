@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
 
   $('.products__slider').slick({
     prevArrow: '<button class="slider-btn slider-btn__left"><svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.21839 1L1 9L9.21839 17"/></svg></button>',
@@ -8,16 +8,29 @@ $(function () {
 
   $('.questions__item-title').click(function () {
 
-    $(this).toggleClass('in').next().slideToggle();
-    $('.questions__item-title').not(this).removeClass('in').next().slideUp();
+    $(this).toggleClass('inin').next().slideToggle();
+    $('.questions__item-title').not(this).removeClass('inin').next().slideUp();
 
   });
 
   $('#fullpage').fullpage({
-		autoScrolling:true,
+		autoScrolling: true,
     scrollHorizontally: true,
     sectionSelector: '.page-section',
-	});
+    scrollOverflow: true,
+    responsiveHeight: 650,
+	  menu: '#header__nav',
+    anchors: ['top', 'products', 'benefits', 'specification', 'questions', 'contacts'],
+  });
+  
+  $('.menu__btn').on('click', function () {
+    $('.menu__btn').toggleClass('menu__btn--active');
+    $('.menu__list').toggleClass('menu__list--active');
+  });
 
+  $('.menu__list-link').on('click', function () {
+    $('.menu__btn').removeClass('menu__btn--active');
+    $('.menu__list').removeClass('menu__list--active');
+  });
 
 });

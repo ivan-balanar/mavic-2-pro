@@ -43,13 +43,19 @@
 
 .menu{
 	&__list-item{
+		transition: all .3s;
 		display: inline-block;
 		& + .menu__list-item{
 			padding-left: 20px;
 		}
 	}
+	&__list-phone{
+		display: none;
+	}
+	&__btn{
+		display: none;
+	}
 }
-
 .top{
 	background-image: url(../images/top-bg.jpg);
 	&::before{
@@ -142,7 +148,7 @@
 	border: none;
 	background-color: #fff;
 	position: absolute;
-	bottom: -45px;
+	bottom: -48px;
 	right: 0;
 	outline: none;
 	cursor: pointer;
@@ -374,7 +380,7 @@
 			transition: all .3s;
 		}
 	}
-	&__item-title.in::before{
+	&__item-title.inin::before{
 		transform: rotate(180deg);
   }
 	&__item-text{
