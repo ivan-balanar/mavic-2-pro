@@ -439,6 +439,65 @@
   }
 }
 
+@media (max-height: 820px){
+  .benefits{
+    .page-section__wrapper{
+      height: 200vh;
+    }
+  }
+  .contacts{
+    .page-section__wrapper{
+      height: 130vh;
+    }
+  }
+}
+
+@media (max-height: 670px){
+  .products{
+    .page-section__wrapper{
+      height: 130vh;
+    }
+  }
+  .benefits{
+    .page-section__wrapper{
+      height: 220vh;
+    }
+  }
+  .specification{
+    .page-section__wrapper{
+      height: 130vh;
+    }
+  }
+  .contacts{
+    .page-section__wrapper{
+      height: 160vh;
+    }
+  }
+}
+
+@media (max-height: 570px){
+  .products{
+    .page-section__wrapper{
+      height: 150vh;
+    }
+  }
+  .benefits{
+    .page-section__wrapper{
+      height: 270vh;
+    }
+  }
+  .specification{
+    .page-section__wrapper{
+      height: 150vh;
+    }
+  }
+  .contacts{
+    .page-section__wrapper{
+      height: 180vh;
+    }
+  }
+}
+
 @media (max-height: 375px){
   .menu__list-phone{
     padding: 15px 0;

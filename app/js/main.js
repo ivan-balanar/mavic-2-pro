@@ -18,7 +18,7 @@ $(document).ready(function () {
     scrollHorizontally: true,
     sectionSelector: '.page-section',
     scrollOverflow: true,
-    responsiveHeight: 650,
+    // responsiveHeight: 750,
 	  menu: '#header__nav',
     anchors: ['top', 'products', 'benefits', 'specification', 'questions', 'contacts'],
   });
